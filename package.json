@@ -1,0 +1,39 @@
+{
+  "name": "lol-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
+  "scripts": {
+    "test": "jest",
+    "clean": "rimraf lib",
+    "compiler": "npm run test && npm run clean && tsc --pretty && babel --extensions '.ts' src -d esm",
+    "patch": "yarn compiler && npm version patch && npm publish",
+    "minor": "yarn compiler && npm version minor && npm publish",
+    "major": "yarn compiler && npm version major && npm publish",
+    "build": "npm run compiler"
+  },
+  "keywords": [],
+  "author": "Joao-Lima",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-typescript": "^7.24.7",
+    "@types/jest": "^29.5.12",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.3",
+    "dotenv": "^16.4.5"
+  }
+}
