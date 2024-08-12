@@ -9,12 +9,12 @@
 
 ## Usage
 
-`yarn add lol-api` or `npm i lol-api`
+`yarn add lol-sdk` or `npm i lol-sdk`
 
 ## Example code
 
 ```ts
-import { RiotClient, ExecuteRegion } from "lol-api";
+import { RiotClient, ExecuteRegion } from "lol-sdk";
 
 const client = new RiotClient({
   apiKey: fakeValidApikey,
@@ -27,7 +27,7 @@ const response = await client.AccountV1.byRiotId("JoeMomoa", "Momoa");
 ## All Implemented API methods
 
 ```ts
-import { RiotClient, ExecuteRegion, ExecuteRegionPlatform } from "lol-api";
+import { RiotClient, ExecuteRegion, ExecuteRegionPlatform } from "lol-sdk";
 
 const client = new RiotClient({
   apiKey: apiKey,
